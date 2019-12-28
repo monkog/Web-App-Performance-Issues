@@ -1,4 +1,4 @@
-# Memory leaks due to global objects
+# Accidental global objects
 
 Objects created in the global scope can be the cause of memory leaks. Especially when a global variable is instantiated by mistake and stays in the application memory, even though references to this objects are no longer existing.
 
