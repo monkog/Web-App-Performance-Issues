@@ -6,6 +6,10 @@ function createGlobalObject() {
     globalObject = new Array(1000000).fill(1);
 }
 
+function createGlobalObjectByThis() {
+    this.globalThisObject = new Array(1000000).fill(1);
+}
+
 function createExplicitGlobalObject() {
     window.explicitGlobalObject = new Array(1000000).fill(1);
 }
