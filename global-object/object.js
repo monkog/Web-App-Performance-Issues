@@ -1,3 +1,5 @@
+// 'use strict'; // Uncomment this line to make JavaScript parsing mode more strict.
+
 function createLocalObject() {
     const localObject = new Array(1000000).fill(1);
 }
