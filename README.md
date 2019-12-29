@@ -7,3 +7,7 @@ This repository contains a number of simple examples that will show performance 
 1. [DOM leaking](./dom/README.md)
 2. [Accidental global objects](./global-object/README.md)
 3. [Closure leaking](./closure/README.md)
+
+## Performance issues
+
+1. [Data locality](./data-locality/README.md)
