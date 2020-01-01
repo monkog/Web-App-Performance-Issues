@@ -1,6 +1,6 @@
 # DOM leaking
 
-It's sometimes useful to find, store and manipulate DOM objects in JavaScript code. Unfortunately it may cause memory leaking problems. 
+It's sometimes useful to find, store and manipulate DOM objects in JavaScript code. Unfortunately it may cause memory leaking problems.
 
 The problem appears when the reference in code is still kept, but the node itself was removed from the document. These kind of errors are hard to find, as DOM objects tend to use only small amounts of memory.
 
