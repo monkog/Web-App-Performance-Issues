@@ -4,7 +4,7 @@ This repository contains a number of simple examples that will show performance 
 
 ## Memory leaks
 
-1. [DOM leaking](./dom/README.md)
+1. [DOM leaking](./dom-leaking/README.md)
 2. [Accidental global objects](./global-object/README.md)
 3. [Closure leaking](./closure/README.md)
 

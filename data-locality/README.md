@@ -18,4 +18,7 @@ To check the actual computation time we will use ```console.time``` method.
 
 As you can observe in the console, the computation times are quite different. When accessing array cells in the ordered sequence the function runns much faster than in the other case. You can see the results below.
 
-![Computation time for mixed and local access](./.Docs/ComputationTime.JPG);
+![Computation time for mixed and local access](./.Docs/ComputationTime.JPG)
+
+[Go to top](#data-locality)  
+[Go to main page](../README.md)

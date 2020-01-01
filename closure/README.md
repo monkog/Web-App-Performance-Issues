@@ -41,3 +41,6 @@ The same situation can be spotted in the *Performance* tab.
 The blue part marked on the timeline is the memory usage. It is visible at the bottom of the timeline. Yellow heaps indicate mouse clicks. You can easily observe that with each click the memory used increases instantly. The blue part gets bigger with every click.
 
 ![The performance timeline capture of the closure leak](./.Docs/ChainsawPattern.JPG)
+
+[Go to top](#closure-leaking)  
+[Go to main page](../README.md)

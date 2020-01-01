@@ -51,3 +51,6 @@ The question is, how to fix such issues? The one and only rule that will prevent
 When all measurements are done before mutations, the *layout* phase and the *recalculate styles* phase are called only once during the CRP. It can be spotted on the timeline for the no reflow example.
 
 ![The timeline for the no reflow example](./.Docs/NoReflow.JPG)
+
+[Go to top](#forced-reflow)  
+[Go to main page](../README.md)

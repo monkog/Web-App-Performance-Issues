@@ -52,3 +52,6 @@ The best practice is to avoid global variables. To prevent such cases you can ad
 ![Console error that will be shown when using accidental global variable in strict parser mode](./.Docs/ParserError.jpg)
 
 The other good practice to remember is to assign null to a global variable, which value will no longer be needed. Thiss will release the memory used for storing its value.
+
+[Go to top](#accidental-global-objects)  
+[Go to main page](../README.md)

@@ -39,3 +39,6 @@ The nodes that were removed from the DOM, but are still kept in the memory will 
  After selecting such node, the *Retainers* section will be filled with data, showing objects that refer the selected node. As you expand the retainers' nodes, you will notice JavaScript file names next to some nodes. These are links to source files, in which the detached nodes are references. This way you can navigate straight to the code that keeps the reference to the detached DOM element. Objects written in blue font are the actual instances that are keeping the references to the objects.
 
 ![The Retainers tree of the detached node](./.Docs/Details.png)
+
+[Go to top](#dom-leaking)  
+[Go to main page](../README.md)
