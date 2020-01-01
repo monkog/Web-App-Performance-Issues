@@ -48,6 +48,24 @@ The question is, how to fix such issues? The one and only rule that will prevent
 
 <span style="font-size: 40px; font-weight: bold;">Measure before Mutate</span>
 
+What if the measurement **NEEDS** to be done after the mutation? You can delay the measurement and use the *requestAnimationFrame* method. The given callback will be executed at the very beginning of the next rendered frame. This will keep all the measurements before mutations during a single rendering cycle.
+
+```javascript
+function mutateThenMeasure() {
+    let element = document.getElementById('message');
+
+    let children = document.querySelectorAll('.bar');
+    for(let i = 0; i < children.length; i++) {
+        children[i].style.width = '200px'; // mutate
+
+        requestAnimationFrame(() => {
+            let elementWidth = element.offsetWidth; // measure
+            console.log(elementWidth);
+        });
+    }
+}
+```
+
 When all measurements are done before mutations, the *layout* phase and the *recalculate styles* phase are called only once during the CRP. It can be spotted on the timeline for the no reflow example.
 
 ![The timeline for the no reflow example](./.Docs/NoReflow.JPG)

@@ -15,7 +15,10 @@ function forcedReflow() {
     console.time('forced reflow');
     let children = document.querySelectorAll('.bar');
     for(let i = 0; i < children.length; i++) {
-        children[i].style.width = (element.offsetWidth - 200) + 'px';
+        children[i].style.width = 200 +'px';
+        requestAnimationFrame(() => {
+            console.log(element.offsetWidth);
+        });
     }
 
     console.timeEnd('forced reflow');
