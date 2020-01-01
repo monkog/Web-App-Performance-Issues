@@ -11,3 +11,4 @@ This repository contains a number of simple examples that will show performance 
 ## Performance issues
 
 1. [Data locality](./data-locality/README.md)
+2. [Forced reflow](./forced-reflow/README.md)
