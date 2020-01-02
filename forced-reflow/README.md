@@ -1,4 +1,4 @@
-# Forced reflow
+# Forced reflow (Layout thrashing)
 
 Each web page consists of a number of HTML, CSS and JavaScript files. Browsers interpret those files and basing on their content render the page. The sequence of rendering steps is called **Critical Rendering Path (CRP)**. It is composed of five steps:
 
@@ -14,7 +14,7 @@ The forced reflow causes the layout phase to be executed during the JavaScript p
 
 ## The cause
 
-But what exactly causes the forced reflow? The calls in JavaScript code that access DOM elements may be **measuring (computing)** or **mutating (updating)** the document. Measurement actions need to be performed on the latest DOM version. If any mutation was done upfront, the whole page layout needs to be re-calculated in order to perform the computations on the newest version of the DOM. This causes the Layout phase to be executed during the JavaScript phase.
+But what exactly causes the forced reflow? The calls in JavaScript code that access DOM elements may be **measuring (computing)** or **mutating (updating)** the document. The browser usually waits to do the layout calculations until the end of the current operation or frame. For that to happen, measurement actions need to be performed on the latest DOM version. If any mutation in the code was done before measurement, the current layout becomes *invalidated* and will need to be re-calculated in order to perform the computations on the newest version of the DOM. This causes the Layout phase to be executed during the JavaScript phase.
 
 ## Example
 
@@ -44,6 +44,8 @@ When you click on one of the violet bars, you will see more information in the S
 
 ![Summary of the Recalculate Style with reflow](./.Docs/ReflowSummary.JPG)
 
+You can find information on which element calls cause the forced reflow on [this gist page](https://gist.github.com/paulirish/5d52fb081b3570c81e3a).
+
 The question is, how to fix such issues? The one and only rule that will prevent you from the forced reflow issue is:
 
 <span style="font-size: 40px; font-weight: bold;">Measure before Mutate</span>
@@ -70,5 +72,5 @@ When all measurements are done before mutations, the *layout* phase and the *rec
 
 ![The timeline for the no reflow example](./.Docs/NoReflow.JPG)
 
-[Go to top](#forced-reflow)  
+[Go to top](#forced-reflow-layout-thrashing)  
 [Go to main page](../README.md)
