@@ -4,15 +4,15 @@ class LeakingLogger {
     }
 
     log(counter) {
-        setInterval(() => {
+        setTimer(() => {
             console.log('Leaking...');
             if (counter < 10) {
                 this.log(counter + 1);
             }
-        }, 500);
+        }, 100);
     }
 }
 
-function createInterval() {
+function createTimer() {
     new LeakingLogger();
 }
