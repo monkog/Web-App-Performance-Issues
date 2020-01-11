@@ -9,6 +9,7 @@ Remember to run examples in the *incognito*. Alternatively you can clear your ca
 1. [DOM leaking](./dom-leaking/README.md)
 2. [Accidental global objects](./global-object/README.md)
 3. [Closure leaking](./closure/README.md)
+4. [Forgotten Callback / Timer](./timer/README.md)
 
 ## Performance issues
 
