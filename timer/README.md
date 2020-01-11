@@ -1,4 +1,4 @@
-# Forgotten Callback / Timer
+# Forgotten callback / timer
 
 The use of *setInterval* and callbacks is common in JavaScript. What's also common is forgetting to release references to such objects. Even when their owner is no longer referenced, references to callbacks and timers stay in the memory. This way their owner is prevented from being disposed as well. Both the timer and its owner will be disposen when the timer finishes execution.
 
