@@ -6,7 +6,7 @@ class LeakingLogger {
     log(counter) {
         setTimeout(() => {
             console.log('Leaking...');
-            if (counter < 10) {
+            if (counter < 5) {
                 this.log(counter + 1);
             }
         }, 100);

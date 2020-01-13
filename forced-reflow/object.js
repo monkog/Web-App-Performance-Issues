@@ -8,17 +8,14 @@ function createChart() {
     }
 }
 
-
 function forcedReflow() {
     let element = document.getElementById('message');
 
     console.time('forced reflow');
     let children = document.querySelectorAll('.bar');
-    for(let i = 0; i < children.length; i++) {
-        children[i].style.width = 200 +'px';
-        requestAnimationFrame(() => {
-            console.log(element.offsetWidth);
-        });
+    for (let i = 0; i < children.length; i++) {
+        children[i].style.width = 200 + 'px';
+        console.log(element.offsetWidth);
     }
 
     console.timeEnd('forced reflow');
@@ -30,7 +27,7 @@ function noReflow() {
 
     console.time('no reflow');
     let children = document.querySelectorAll('.bar');
-    for(let i = 0; i < children.length; i++) {
+    for (let i = 0; i < children.length; i++) {
         children[i].style.width = (elementWidth - 1000) + 'px';
     }
 
